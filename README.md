@@ -17,10 +17,10 @@ Simple test to sniff out chromecast once auth on Guest Network and Nevaya Servic
 
 ### Example Result.
 Device Found  1   
-  Full Info:  CastInfo(services={ServiceInfo(type='mdns', data='Chromecast-9a720aad27ed05abf4aac254a0f1382e._googlecast._tcp.local.')}, uuid=UUID('9a720aad-27ed-05ab-f4aa-c254a0f1382e'), model_name='Chromecast', friendly_name='The Carlin TV 23', host='172.20.0.8', port=8009, cast_type=None, manufacturer=None)  
-    Serivce:   {ServiceInfo(type='mdns', data='Chromecast-9a720aad27ed05abf4aac254a0f1382e._googlecast._tcp.local.')}  
-    UUID:   9a720aad-27ed-05ab-f4aa-c254a0f1382e  
-    Model:  Chromecast  
-    Name:   The Carlin TV 23  
-    Host:   172.20.0.8  
-    Port:   8009  
+-  Full Info:  CastInfo(services={ServiceInfo(type='mdns', data='Chromecast-9a720aad27ed05abf4aac254a0f1382e._googlecast._tcp.local.')}, uuid=UUID('9a720aad-27ed-05ab-f4aa-c254a0f1382e'), model_name='Chromecast', friendly_name='The Carlin TV 23', host='172.20.0.8', port=8009, cast_type=None, manufacturer=None)  
+  -  Serivce:   {ServiceInfo(type='mdns', data='Chromecast-9a720aad27ed05abf4aac254a0f1382e._googlecast._tcp.local.')}  
+  -  UUID:   9a720aad-27ed-05ab-f4aa-c254a0f1382e  
+  -  Model:  Chromecast  
+  -  Name:   The Carlin TV 23  
+  -  Host:   172.20.0.8  
+  -  Port:   8009  
