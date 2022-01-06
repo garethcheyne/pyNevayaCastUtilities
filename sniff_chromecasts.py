@@ -25,10 +25,11 @@ pychromecast.discovery.stop_discovery(browser)
 
 
 if services != None:
-    for index, device in enumerate(services):
-        print("_dev_ ", device)
 
-        uuid = [device[1]]
+    for index, device in enumerate(services):
+        
+       # print("_dev_ ", device)
+
         print("=== Device Found " , index +1 ,"=================================================")     
         print("  Full Info: ", device)
         print("    Serivce:  ", device[0])        
