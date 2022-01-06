@@ -37,3 +37,6 @@ if services != None:
         print("    Name:  ", device[3])
         print("    Host:  ", device[4])
         print("    Port:  ", device[5])
+
+else:
+    print("=== No Devices Found =================================================")     
