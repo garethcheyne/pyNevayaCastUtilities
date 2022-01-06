@@ -62,7 +62,7 @@ try:
     for i, mac in enumerate(NEVAYA_MACS):
 
         response = unifi.authorize_guest(mac, 5259487) # 10 Years
-        print("Nevays {} Done: {}".format(i, response))
+        print("Nevaya {} Done: {}".format(i, response))
         
     print("\n\n")
 

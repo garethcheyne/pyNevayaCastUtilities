@@ -8,8 +8,8 @@ Example Result
 NEVAYA Casting Unifi Config Starting...
 
   Connecting to Controller on 192.168.1.1
-Nevays 0 Done: [{'_id': '61d656f3b60cef058dec6d51', 'mac': '00:11:22:33:33:33', 'start': 1641436915, 'site_id': '61bd46e4806f2c067914a0ec', 'authorized_by': 'api', 'end': 1957009124}]
-Nevays 1 Done: [{'_id': '61d656f4b60cef058dec6d53', 'mac': '00:11:22:33:45:01', 'start': 1641436916, 'site_id': '61bd46e4806f2c067914a0ec', 'authorized_by': 'api', 'end': 1957009124}]
+Nevaya 0 Done: [{'_id': '61d656f3b60cef058dec6d51', 'mac': '00:11:22:33:33:33', 'start': 1641436915, 'site_id': '61bd46e4806f2c067914a0ec', 'authorized_by': 'api', 'end': 1957009124}]
+Nevaya 1 Done: [{'_id': '61d656f4b60cef058dec6d53', 'mac': '00:11:22:33:45:01', 'start': 1641436916, 'site_id': '61bd46e4806f2c067914a0ec', 'authorized_by': 'api', 'end': 1957009124}]
 
 
 ## Sniff Chromecast
