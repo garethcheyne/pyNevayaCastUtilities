@@ -4,6 +4,9 @@
 Simple CLI to auth the Nevaya Server MAC's on a Unifi Network using Unifi Guest Portal. This will auth the Nevaya MAC's for 10 Years..
 
 ### Example Result
+
+py.exe .\unifi_auth_nevaya.py --ip 192.168.1.1 --u johndoe --p secret
+
 NEVAYA Casting Unifi Config Starting...  
   
   Connecting to Controller on 192.168.1.1  
