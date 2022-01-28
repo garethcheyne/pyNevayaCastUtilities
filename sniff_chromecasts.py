@@ -49,9 +49,6 @@ print("=== END ARP (MAC's) =================================================\n")
 # List chromecasts on the network, but don't connect
 services, browser = pychromecast.discovery.discover_chromecasts()
 
-# pychromecast.discovery.stop_discovery(browser)
-
-
 if services != None:
     for index, device in enumerate(services):     
 
