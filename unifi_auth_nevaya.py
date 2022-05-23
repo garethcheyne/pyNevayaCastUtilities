@@ -53,7 +53,7 @@ if args.p:
 
 ## Run Update.
 #Create Connection
-print("  Connecting to Controller on {}".format(UNIFI_IP))
+print("  Connecting to Controller on {} port: {}".format(UNIFI_IP, UNIFI_PORT))
 try:
     unifi = Controller(UNIFI_IP, USERNAME, PASSWORD, version=VERSION, port=UNIFI_PORT, ssl_verify=False)
     print("\n\n")
@@ -61,7 +61,7 @@ try:
     ## Auth Nevaya MAC's on Guest VLAN
     for i, mac in enumerate(NEVAYA_MACS):
 
-        response = unifi.authorize_guest(mac, 5259487) # 10 Years
+        response = unifi.authorize_guest(mac, 15259487) # 30 Years
         print("Nevaya {} Done: {}".format(i, response))
         
     print("\n\n")

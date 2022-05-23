@@ -12,9 +12,6 @@ from subprocess import check_output
 clear = lambda: os.system('cls')
 clear()
 
-# Change to the name of your Chromecast
-CAST_NAME = "The Carlin TV 23"
-
 VIDEO_ID = "VafTMsrnSTU"
 
 ## cli interface
@@ -50,17 +47,11 @@ print("=== END ARP (MAC's) =================================================\n")
 services, browser = pychromecast.discovery.discover_chromecasts()
 
 if services != None:
-    for index, device in enumerate(services):     
+    for index, device in enumerate(services):   
 
         chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=[device[3]])
-        cast = chromecasts[0]
-        cast.wait()
 
-        yt = YouTubeController()
-        cast.register_handler(yt)
-        yt.play_video(VIDEO_ID)
-
-        print("=== Device Found " , index +1 ,"=================================================")     
+        print("=== Device Found " , index +1 ,"=================================================") 
         print("  Full Info: ", device)
         print("    Serivce:  ", device[0])        
         print("    UUID:  ", device[1])        
@@ -68,6 +59,9 @@ if services != None:
         print("    Name:  ", device[3])
         print("    Host:  ", device[4])
         print("    Port:  ", device[5])
+        # print("    Status: \n", cast.status, " \n")
+
+
 
 else:
     print("=== No Devices Found =================================================\n")     
