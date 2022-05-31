@@ -4,9 +4,11 @@ import argparse
 urllib3.disable_warnings()
 from pyunifi.controller import APIError, Controller
 
-
 ####
-## Exmaple c:\py.exe .\unifi_auth_nevaya.py --ip 192.168.1.1 --u johndoe --p secret
+## Exmaple for UDM
+# python .\unifi_auth_nevaya.py --ip 192.168.1.1 --u johndoe --p secret
+## Example for CloudKey Gen 1
+# python .\unifi_auth_nevaya.py --ip 192.168.1.1 --s 8443 --v v4 --u johndoe --p secret
 ###
 
 #Nevaya MAC address for Casting Service.
@@ -17,6 +19,7 @@ UNIFI_PORT = 443
 USERNAME = "ubnt"
 PASSWORD  = "ubnt"
 VERSION = "UDMP-unifiOS"
+
 
 ## Clear Screen
 clear = lambda: os.system('cls')
@@ -53,12 +56,14 @@ if args.p:
 
 ## Run Update.
 #Create Connection
-print("  Connecting to Controller on {} port: {}".format(UNIFI_IP, UNIFI_PORT))
+print("  Connecting to Controller on {} port: {}, version: {}".format(UNIFI_IP, UNIFI_PORT, VERSION))
 try:
-    unifi = Controller(UNIFI_IP, USERNAME, PASSWORD, version=VERSION, port=UNIFI_PORT, ssl_verify=False)
+    unifi = Controller(host=UNIFI_IP, username=USERNAME, password=PASSWORD, port=UNIFI_PORT, version=VERSION, ssl_verify=False)
     print("\n\n")
 
-    ## Auth Nevaya MAC's on Guest VLAN
+        # Auth Nevaya MAC's on Guest VLAN
+
+    
     for i, mac in enumerate(NEVAYA_MACS):
 
         response = unifi.authorize_guest(mac, 15259487) # 30 Years
@@ -66,7 +71,8 @@ try:
         
     print("\n\n")
 
-except APIError:
+except APIError():
+
     print("\n\n Failed to conntect, please check the arguments settings. \n\n")
     print("Unifi Controller IP: {}".format(UNIFI_IP))
     print("Unifi Controller Port: {}".format(UNIFI_PORT))
